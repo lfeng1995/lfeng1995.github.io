@@ -1,145 +1,616 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Lei Feng (CQU / RIKEN)</title>
-    <base href="https://lfeng-ntu.github.io/index.html">
+    <title>Hongxin Wei @ NTU</title>
+    <link rel="icon" href="imgs/logo.ico" type="image/x-icon">
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Hongxin, wei, ntu, homepage, robust, deep, learning">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+          body {
+            font-family: 'sans-serif';
+            font-size: 16px;
+            background-color: #FFFFFF;
+            color: #4F6071;
+          #header {
+            background-color: #f4f4f4;
+            /*background-color: #FFFFFF;*/
+            display: flex;
+            align-items: flex-end;
+            padding-top:60px;
+            padding-bottom:60px;
+          }
+          #footer {
+            background-color: #FFFFFF;
+            padding:60px;
+          }
+          #portrait {
+            border: 3px solid white;
+          }
+          #header-text {
+            margin-top: 60px;
+            margin-left: 220px;
+          }
+          #header-text-name {
+            font-size: 40px;
+          }
+          #header-text-email {
+            font-size: 20px;
+            line-height: 50px;
+            font-style: italic;
+          }
+          #header-text-title {
+            font-size: 20px;
+          }
+          #header-text-remark {
+            font-size: 15px;
+            font-style: italic;
+          }
+          .header-text-desc {
+            font-size: 20px;
+          }
+          .vspace-top {
+            margin-top: 30px;
+          }
+          .vspace-top-news {
+              margin-top: 15px;
+          }
+          .vspace-top-pub {
+              margin-top: 30px;
+          }
+          .vspace-top-conferences {
+            margin: auto;
+            width: 100%;
+          }
+          .paper-image {
+            width: 150px;
+          }
+          .news-date {
+              font-weight: bold;
+          }
+          .paper-title {
+            font-weight: bold;
+          }
+          .paper-authors {
+            font-style: italic;
+          }
+          .newsCon{
+            height: auto;
+            padding-bottom: 30px;
+            position: relative;
+          }
+          .newsCon .open-news-all{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              /* text-align: center; */
+              cursor: pointer;
+              color: #1a9df5;
+          }
+          .newsCon .coll-news-all{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              /* text-align: center; */
+              display: none;
+              cursor: pointer;
+              color: #1a9df5;
+          }
+          .publicCon{
+            height: auto;
+            padding-bottom: 30px;
+            position: relative;
+          }
+          .publicCon .open-pub-all{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              /* text-align: center; */
+              cursor: pointer;
+              color: #1a9df5;
+          }
+          .publicCon .coll-pub-all{
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              /* text-align: center; */
+              display: none;
+              cursor: pointer;
+              color: #1a9df5;
+          }
+    </style>
 </head>
 
 <body>
-<table summary="Table for page layout." id="tlayout">
-<tr valign="top">
-<h1 style="padding-left: 0.5em">Lei Feng (CQU / RIKEN)</h1><hr>
-<td id="layout-menu">
-    <div class="menu-item"><a href="index.html" class="current">Home</a></div>
-	<div class="menu-item"><a href="publications.html">Publications</a></div>
-	<div class="menu-item"><a href="services.html">Professional Services</a></div>
-    <div class="menu-item"><a href="codedata.html">Codes & Datasets</a></div>
-	<div class="menu-item"><a href="news.html">News</a></div>
-</td>
-<td id="layout-content">
-    <h1 style="margin-top: 0em">Home</h1><br>
-  <!--  <p>[ <a href="#news">News</a>,
-        <a href="#interest">Research Interests</a>,
-        <a href="#job">Job Experience</a>,
-        <a href="#edu">Education</a> ]</p>-->
-    <table class="imgtable"><tr valign="top">
-        <td align="left">
-            <p><span style="font-size: 130%"><b>Lei Feng (冯磊)</b></span></p>
-            <p>
-                <b>Professor, PhD Supervisor</b><br>
-                <a href="http://www.cs.cqu.edu.cn/" target="_blank">College of Computer Science</a> <br>
-                <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University, China</a> <br>
-			</p>
-			
-            <p>
-                <b>Visiting Scientist</b><br>
-                <a href="https://aip.riken.jp/labs/generic_tech/imperfect_inf_learn/?lang=en" target="_blank">Imperfect Information Learning Team</a> <br>
-                <a href="https://aip.riken.jp/" target="_blank">RIKEN Center for Advanced Intelligence Project, Japan</a> <br>
-			</p>
-			
-            <p>
-                Scholar Profile: <a href="https://scholar.google.com.sg/citations?user=KomQOFkAAAAJ&hl" target="_blank">Google Scholar Profile</a> & 
-				<a href="http://www.cs.cqu.edu.cn/info/1274/5243.htm" target="_blank">Official Profile (Chinese)</a> <br>
-				<!-- <a href="http://csrankings.org/#/fromyear/2019/toyear/2020/index?ai&mlmining&world" target="_blank">[CSRankings]</a> -->
-				E-mail: feng0093@e.ntu.edu.sg & lfeng@cqu.edu.cn <br>
-            </p>
+    <div id='header'>
+        <div class='container'>
+            <div class='row'>
+                <div class="col-sm-3 offset-sm-1">
+                    <img src='imgs/cat_compressed.jpg' class='img-fluid' id='portrait'>
+                </div>
 
-			<!--<p>
-			<u>I am always looking for self-motivated PhD students, master students, and undergraduate students (research assistants). Please drop me an email if you are interested in working with me.</u>
-			</p>-->
-        </td>
-    </tr></table>
+                <div class="col">
+                  <div id='header-text-name'>
+                    Hongxin Wei
+                  </div>
+                  <div id='header-text-title'>
+                    Ph.D. student @ NTU, Singapore
+                  </div>
+                <!-- </br> -->
+                  <div id='header-text-email'>
+                    hongxin001 [at] e.ntu.edu.sg
+                  </div>
+                  <div>
+                    <a href="https://github.com/hongxin001", target="_blank">[GitHub]</a>
+                    <a href="https://scholar.google.com/citations?user=cABH034AAAAJ&hl=en", target="_blank">[Google Scholar]</a>
+                    <a href="docs/CV_hongxin_2021_12_2.pdf", target="_blank">[Download CV]</a>
+                  </div>
 
-<div>
-        <h2><hr><a name="news"></a>Top News</h2>
-        <ul>
-		   <li><p>[Dec 2021] Two papers were accepted to AAAI'22. </p></li>
-		   <li><p>[Sep 2021] Two papers were accepted to NeurIPS'21. </p></li> 
-		   <li><p>[Jul 2021] Invited to serve as a SPC for AAAI'22. </p></li>
-		   <li><p>[Jul 2021] One paper was accepted to ICCV'21. </p></li>	
-		   <li><p>[Jul 2021] Received NTU SCSE Outstanding PhD Thesis Runner-Up Award (in the situation of early graduation). </p></li>
-		   <li><p>[Jul 2021] Appointed as a Visiting Scientist at RIKEN AIP. </p></li>
-		   <li><p>[May 2021] One paper was accepted to KDD'21. </p></li>
-		   <li><p>[May 2021] Two papers were accepted to ICML'21. </p></li>
-		   <li><p>[Apr 2021] One paper was accepted to IJCAI'21. </p></li>
-		   <li><p>[Feb 2021] Invited to serve as an expert reviewer for ICML'21. </p></li>
-		   <li><p>[Jan 2021] Invited to serve as a SPC for IJCAI'21. </p></li>
-        </ul>
-		See more news <a href="news.html">here</a>.
-</div>
-
-<div>
-        <h2><hr><a name="research"></a>Research Interests</h2>
-
-<!--<ul>-->
-<p>My research interests lie in machine learning, data mining, and artificial intelligence, with a particular emphasis on</p>
-<!--</ul>-->
-<ul>
-<li><p>Theoretical Level: Analysis of the generalization ability of learning algorithms; Theoretical understandings of various loss functions; Development of unbiased estimators for classification risk.<p></li>
-<li><p>Algorithmic Level: Development of effective learning algorithms for various weakly supervised or complex learning frameworks: <em>partial-label learning</em>, <em>noisy-label learning</em>, <em>multiple-instance learning</em>, <em>positive-unlabeled learning</em>, <em>complementary-label learning</em>, <em>semi-supervised learning</em>, <em>multi-label learning</em>, <em>learning from crowds</em>, <em>learning with similarity information</em>, <em>unsupervised domain adaptation</em>, etc.</p></li>
-<li><p>Appliction Level: Application of weakly supervised learning algorithms in computer vision and natural language processing.</p></li>
-</ul>
-See my publications <a href="publications.html">here</a>.
-</div>
-
-<div>
-    <h2><hr><a name="researchApp"></a>Research Appointments</h2>
-        <ul>
-			<li><p><b>Visiting Scientist</b> (Jul 2021 - Present)</p></li>
-			Imperfect Information Learning Team, RIKEN Center for Advanced Intelligent Project, Tokyo, Japan<br>
-			<br>
-			<li><p><b>Professor (PhD Supervisor)</b> (Jan 2021 - Present)</p></li>
-			College of Computer Science, Chongqing University, Chongqing, China<br>
-			<br>
-			<li><p><b>Research Assistant</b> (Aug 2020 - Dec 2020)</p></li>
-			Agent Mediated Intelligence Research Group, School of Computer Science and Engineering, Nanyang Technological University, Singapore<br>
-			Supervised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Prof. Bo An</a><br>
-			<br>
-            <li><p><b>Research Intern</b> (Oct 2019 - Jan 2020)</p></li>
-			Imperfect Information Learning Team, RIKEN Center for Advanced Intelligent Project, Tokyo, Japan<br>
-			Supervised by <a href="http://www.ms.k.u-tokyo.ac.jp/sugi/" target="_blank">Prof. Masashi Sugiyama</a> and <a href="https://niug1984.github.io/" target="_blank">Dr. Gang Niu</a><br>
-        </ul>
-</div>
-
-<div>
-    <h2><hr><a name="Education"></a>Education</h2>
-        <ul>
-			<li><p><b>Ph.D.</b> in Computer Science. Nanyang Technological University, Singapore (Aug 2017 - Dec 2020)</p></li>
-			Thesis submitted in Aug 2020, left NTU in Dec 2020, defended in Jan 2021, degree conferred in Feb 2021.<br>
-			<b>NTU SCSE Outstanding PhD Thesis Award Runner-Up (in the situation of early graduation).</b> Supervised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Prof. Bo An</a>.<br>
-			<br>
-			<li><p><b>B.E.</b> in Computer Science. Southwest University, Chongqing, China (Sep 2013 - Jul 2017)</p></li>
-			<b>Outstanding Graduate of Southwest University.</b>
-        </ul>
-</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <div class='container'>
+        <div class='row vspace-top'>
+            <div class='col offset-sm-1'>
+                <h1>Bio</h1>
+                <p>
+                    I am a third-year Ph.D. student at the <a href="http://scse.ntu.edu.sg/Pages/Home.aspx" target="_blank">School of Computer Science and Engineering</a>, <a href="https://www.ntu.edu.sg/Pages/home.aspx" target="_blank">Nanyang Technological University</a>, supervised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Prof. Bo An</a>.
+                    Previously I spent a wonderful year as a research assistant in <a href="https://iiis.tsinghua.edu.cn/" target="_blank">the Institute for Interdisciplinary Information Sciences</a> at Tsinghua University, working with <a href="https://dblp.org/pid/96/3886.html" target="_blank">Prof. Pingzhong Tang</a>.
+                    Prior to that, I received my B.E. in Software Engineering from <a href="http://english.hust.edu.cn/" target="_blank">Huazhong University of Science and Technology</a> in 2016.
+                </p>
+                <p>
+                    My research interest lies in robust deep learning, including robustness against noisy labels, out-of-distribution examples, and adversarial examples.
+                    The goal of my research is to develop reliable learning systems, which can work safely and adaptively in the presence of noisy/biased/malicious data stream in either the train or test datasets.
+                    <!-- Most of my work explore, understand, and mitigate the problem settings where neural networks would naturally fails. -->
+                    Research topics that I am currently working on include:
+                </p>
+                <li> <i>Learning with (open-set) noisy labels;</i> </li>
+                <li> <i>Out-of-distribution detection;</i> </li>
+                <li> <i>Adversarial attack and defense; </i> </li>
+                <li> <i>Uncertainty estimation. </i> </li>
 
-<!--
-<div>
-<h2><hr><a name="biography"></a>Brief Biography</h2>
+
+                <div class='vspace-top'>
+                    <h1>News</h1>
+                </div>
+                <div class="newsCon">
+                    <div class="open-news-all">展开查看全部<span class="arrow-down"></span></div>
+                    <div class="coll-news-all">收起<span class="arrow-up"></span></div>
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            December 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a program committee member for SIGKDD 2022.
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            November 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a reviewer for CVPR 2022.
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            October 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a program committee member for SDM 2022.
+                        </div>
+                    </div>
 
 
-<p>Lei Feng received his Ph.D. degree from <a href="http://scse.ntu.edu.sg/Pages/Home.aspx" target="_blank">School of Computer Science and Engineering</a>, <a href="https://www.ntu.edu.sg/Pages/home.aspx" target="_blank">Nanyang Technological University</a>, supervised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank">Prof. Bo An</a>.
-He was a research intern at <a href="https://aip.riken.jp/labs/generic_tech/imperfect_inf_learn/" target="_blank">Imperfect Information Learning Team</a>, <a href="https://www.riken.jp/en/research/labs/aip/" target="_blank">RIKEN Center for Advanced Intelligence Project</a>, supervised by <a href="http://www.ms.k.u-tokyo.ac.jp/sugi/" target="_blank">Prof. Masashi Sugiyama</a> and <a href="https://niug1984.github.io/" target="_blank">Dr. Gang Niu</a>. Currently, he is a professor at <a href="http://www.cs.cqu.edu.cn/" target="_blank">College of Computer Science</a>, <a href="https://www.cqu.edu.cn/" target="_blank">Chongqing University, China</a> and a visiting scientist at <a href="https://aip.riken.jp/labs/generic_tech/imperfect_inf_learn/?lang=en" target="_blank">Imperfect Information Learning Team</a>, <a href="https://aip.riken.jp/" target="_blank">RIKEN Center for Advanced Intelligence Project, Japan</a>.
-</p>
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            October 2021
+                        </div>
+                        <div class="col">
+                            I am honored to receive NeurIPS 2021 <a href="https://nips.cc/Conferences/2021/ProgramCommittee" target="_blank">Outstanding Reviewer Award</a> (top 8% of reviewers).
+                        </div>
+                    </div>
 
-</div> -->
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            June 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a reviewer for ICLR 2022.
+                        </div>
+                    </div>
 
-<div>
-    <h2><hr><a name="Conferences"></a>Relevant Conferences</h2>
-<iframe src="https://confsearch.ethz.ch/confsearch/faces/pages/staticresults.jsp?query=aaai%20ijcai%20kdd%20icml%20www%20NeurIPS%20cvpr%20iccv%20iclr&sortMode=1&graphicView=0" height="700" width="800" name="confsearch_frame" 
- frameborder="0"> </iframe> 
-</div>
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            April 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a <a href="https://nips.cc/Conferences/2021/ProgramCommittee" target="_blank">reviewer</a> for NeurIPS 2021.
+                        </div>
+                    </div>
+                    
+
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            April 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as an <a href="https://docs.google.com/spreadsheets/d/1jqoVTZ11_0k0Za4Gsd4EU6Y3MPaXoYCXeRqvtYptyqs/edit?usp=sharing" target="_blank">external reviewer</a> for SIGKDD 2021.
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-news'>
+                        <div class="col-sm-2 news-date">
+                            January 2021
+                        </div>
+                        <div class="col">
+                            I will be serving as a <a href="https://icml.cc/Conferences/2021/Reviewers" target="_blank">reviewer</a> for ICML 2021.
+                        </div>
+                    </div>
+                </div>
+                    
 
 
+                <div class='vspace-top'>
+                    <h1>Publications</h1>
+                    <!-- (* Corresponding author; &#8224 Equal contribution) -->
+                    <!-- <span style="font-size: 15px; vertical-align: bottom;">(* Corresponding author; &#8224 Equal contribution)</span> -->
+                </div>
+
+                <div id='header-text-remark'>
+                    ( <sup>*</sup> Corresponding author; <sup>&#8224</sup> Equal contribution)
+                </div>
+                <div class="publicCon">
+                    <div class="open-pub-all">展开查看全部<span class="arrow-down"></span></div>
+                    <div class="coll-pub-all">收起<span class="arrow-up"></span></div>
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                                <source src="lfns/img/rooms_360_compressed.mp4" type="video/mp4">
+                            </video>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                Open-Sampling: Re-balancing Long-tailed datasets with Out-of-Distribution data.
+                            </div>
+                            <div class='paper-desc'>
+                                Under Review
+                            </div>
+                            <div class='paper-authors'>
+                                <b>Hongxin Wei</b>, <a href="https://tlmichael.github.io/" target="_blank" style="color:#4f6071">Lue Tao</a>, Renchunzi Xie, <a href="https://lfeng-ntu.github.io/" target="_blank" style="color:#4f6071">Lei Feng</a>, Bo An
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                                <source src="siren/img/poisson_convergence_15s_label.mp4" type="video/mp4">
+                            </video>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                GearNet: Stepwise Dual Learning for Weakly Supervised Domain Adaptation.
+                            </div>
+                            <div class='paper-desc'>
+                                AAAI 2022
+                            </div>
+                            <div class='paper-authors'>
+                                Renchunzi Xie, <b>Hongxin Wei</b> <sup>*</sup>, Lei Feng,  Bo An.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                                <source src="metasdf/img/metasdf_steps_comp.mp4" type="video/mp4">
+                            </video>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                Open-set Label Noise Can Improve Robustness Against Inherent Label Noise.
+                            </div>
+                            <div class='paper-desc'>
+                                NeurIPS 2021
+                            </div>
+                            <div class='paper-authors'>
+                                <b>Hongxin Wei</b>, Lue Tao, Renchunzi Xie, Bo An.
+                            </div>
+                            <div>
+                                <a href="https://arxiv.org/pdf/2106.10891.pdf" target="_blank">[Paper]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/onn_thumbnail.jpg' class='img-fluid'>
+                        </div> -->
+
+                        <div class="col">
+                        <div class='paper-title'>
+                            Alleviating Noisy-label Effects in Image Classification via Probability Transition Matrix
+                        </div>
+                        <div class='paper-desc'>
+                            BMVC 2021
+                        </div>
+                        <div class='paper-authors'>
+                            Ziqi Zhang, Yuexiang Li, <b>Hongxin Wei</b>, Kai Ma, Tao Xu, Yefeng Zheng
+                        </div>
+                        <div>
+                            <a href="https://arxiv.org/pdf/2110.08866.pdf" target="_blank">[Paper]</a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <video width="100%" playsinline="" autoplay="" loop="" preload="" muted="">
+                                <source src="metasdf/img/metasdf_steps_comp.mp4" type="video/mp4">
+                            </video>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                Multiple-Instance Learning from Similar and Dissimilar Bags
+                            </div>
+                            <div class='paper-desc'>
+                                SIGKDD 2021
+                            </div>
+                            <div class='paper-authors'>
+                                Lei Feng, Senlin Shu, Yuzhou Cao, Lue Tao, <b>Hongxin Wei</b>, Tao Xiang, Bo An, Gang Niu.
+                            </div>
+                            <div>
+                                <a href="https://personal.ntu.edu.sg/boan/papers/KDD21_Multiinstance.pdf" target="_blank">[Paper]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/star_img.png' class='img-fluid'>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                MetaInfoNet: Learning Task-Guided Information for Sample Reweighting.
+                            </div>
+                            <div class='paper-desc'>
+                                Preprints
+                            </div>
+                            <div class='paper-authors'>
+                                <b>Hongxin Wei</b>, Lei Feng, Rundong Wang, Bo An.
+                            </div>
+                            <div>
+                                <a href="https://arxiv.org/pdf/2012.05273.pdf" target="_blank">[Paper]</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/srn_seg_repimage.jpg' class='img-fluid'>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                Deep Learning from Multiple Noisy Annotators as A Union.
+                            </div>
+                            <div class='paper-desc'>
+                                Under Review
+                            </div>
+                            <div class='paper-authors'>
+                                <b>Hongxin Wei</b>, Renchunzi Xie, Lei Feng, Bo Han, Bo An.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/SRNs.gif' class='img-fluid'>
+                        </div> -->
+
+                        <div class="col">
+                            <div class='paper-title'>
+                                Commission Fee is not Enough: A Hierarchical Reinforced Framework for Portfolio Management.
+                            </div>
+                            <div class='paper-desc'>
+                                AAAI 2021
+                            </div>
+                            <div class='paper-authors'>
+                                Rundong Wang <sup>&#8224</sup>, <b>Hongxin Wei</b> <sup>&#8224</sup>, Bo An, Zhouyan Feng, Jun Yao.
+                            </div>
+                            <div>
+                                <a href="https://personal.ntu.edu.sg/boan/papers/AAAI21_Stock.pdf" target="_blank">[Paper]</a>
+                            </div>
+                        </div>
+                    </div>
 
 
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/deepvoxels.png' class='img-fluid'>
+                        </div> -->
 
-</td>
-</tr>
-</table>
+                        <div class="col">
+                        <div class='paper-title'>
+                            Embedding-Augmented Generalized Matrix Factorization for Recommendation with Implicit Feedback.
+                        </div>
+                        <div class='paper-desc'>
+                            IEEE Intelligent Systems (IEEE-IS)
+                        </div>
+                        <div class='paper-authors'>
+                            Lei Feng, <b>Hongxin Wei</b> <sup>*</sup>, Qingyu Guo, Zhuoyi Lin, Bo An.
+                        </div>
+                        <div>
+                            <a href="https://ieeexplore.ieee.org/document/9252133" target="_blank">[Paper]</a>
+                        </div>
+                        </div>
+                    </div>
+
+
+                    <div class='row vspace-top-pub'>
+                        <!-- <div class="col-sm-3">
+                            <img src='imgs/end-to-end-cam.jpg' class='img-fluid'>
+                        </div> -->
+
+                        <div class="col">
+                        <div class='paper-title'>
+                            Combating noisy labels by agreement: A joint training method with co-regularization
+                        </div>
+                        <div class='paper-desc'>
+                            CVPR 2020
+                        </div>
+                        <div class='paper-authors'>
+                            <b>Hongxin Wei</b>, Lei Feng, Xiangyu Chen, Bo An.
+                        </div>
+                        <div>
+                            <a href="https://arxiv.org/pdf/2003.02752.pdf" target="_blank">[Paper]</a>
+                            <a href="https://github.com/hongxin001/JoCoR" target="_blank">[Code]</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                    
+
+                <!-- <div class='vspace-top'>
+                    <h1>Collaborators</h1>
+                </div>
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://lfeng-ntu.github.io/" target="_blank">Lei Feng</a> </li>
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://bhanml.github.io/" target="_blank">Bo Han</a> </li>
+                    </div>
+                </div>
+
+                
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://scholar.google.com/citations?user=JEVpgE8AAAAJ&hl=en" target="_blank">Rundong Wang</a> </li>
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="http://parnec.nuaa.edu.cn/2020/0623/c12783a205854/page.htm" target="_blank">Lue Tao</a> </li>
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://scholar.google.com/citations?user=EQSNE-wAAAAJ&hl=en" target="_blank">Renchunzi Xie</a> </li>
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://dblp.org/pid/256/5052.html" target="_blank">Yuzhou Cao</a> </li>
+                    </div>
+                </div>
+
+                <div class='row vspace-top-news'>
+                    <div class="col">
+                        <li><a href="https://bhanml.github.io/" target="_blank">Ziqi Zhang</a> </li>
+                    </div>
+                </div> -->
+
+                <div class='vspace-top'>
+                    <h1>Relevant Conferences</h1>
+                </div>
+                <div class='row vspace-top-conferences'>
+                    <iframe src="https://confsearch.ethz.ch/confsearch/faces/pages/staticresults.jsp?query=aaai%20ijcai%20kdd%20icml%20www%20NeurIPS%20cvpr%20iccv%20iclr&sortMode=1&graphicView=1" height="700" width="800" name="confsearch_frame"
+                        frameborder="0"> </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='footer' class='vspace-top'>
+    <div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        let initNum=3; //设置需要显示的条数
+        let openNewsDom=document.querySelector('.open-news-all')
+        let collNewsDom=document.querySelector('.coll-news-all')
+        let openPubDom=document.querySelector('.open-pub-all')
+        let collPubDom=document.querySelector('.coll-pub-all')
+        openNewsDom.addEventListener('click',openNewsHandler)
+        collNewsDom.addEventListener('click',collNewsHandler)
+        openPubDom.addEventListener('click',openPubHandler)
+        collPubDom.addEventListener('click',collPubHandler)
+        handleUnshow('.vspace-top-news');//初始执行news和public模块的隐藏函数
+        handleUnshow('.vspace-top-pub');
+        //下面是处理模块的显示函数
+        function handleShow(className){
+            let newDomList=document.querySelectorAll(className)
+            for(let i=0;i<newDomList.length;i++){
+                newDomList[i].style.display='block'
+            }
+        }
+        //下面是处理模块的隐藏函数
+        function handleUnshow(className){
+            let newDomList=document.querySelectorAll(className)
+            for(let i=0;i<newDomList.length;i++){
+                if(initNum<=i){
+                    newDomList[i].style.display='none'
+                }
+            }
+        }
+        //展开news模块
+        function openNewsHandler(e){
+            openNewsDom.style.display='none'
+            collNewsDom.style.display='block'
+            handleShow('.vspace-top-news');
+        }
+        //收起news模块
+        function collNewsHandler(e){
+            openNewsDom.style.display='block'
+            collNewsDom.style.display='none'
+            handleUnshow('.vspace-top-news');
+        }
+        //展开public模块
+        function openPubHandler(e){
+            openPubDom.style.display='none'
+            collPubDom.style.display='block'
+            handleShow('.vspace-top-pub');
+        }
+        //收起public模块
+        function collPubHandler(e){
+            openPubDom.style.display='block'
+            collPubDom.style.display='none'
+            handleUnshow('.vspace-top-pub');
+        }
+    </script>
 </body>
+
 </html>

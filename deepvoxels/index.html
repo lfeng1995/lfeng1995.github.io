@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Teaching 3D to 2D generative models.">
+    <meta name="author" content="Vincent Sitzmann,
+                                 Justus Thies,
+                                 Felix Heide,
+                                 Matthias Niessner,
+                                 Gordon Wetzstein,
+                                 Michael Zollhöfer">
+
+    <title>DeepVoxels: Learning Persistent 3D Feature Embeddings</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="offcanvas.css" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.gif" type="image/gif" >
+  </head>
+
+  <body>
+    <div class="container">
+
+    <div class="jumbotron">
+      <h2>DeepVoxels: Learning Persistent 3D Feature Embeddings</h2>
+      <h2>CVPR 2019 (Oral)</h2>
+      <p class="abstract">Teaching 3D to 2D generative models.</p>
+      <p iclass="authors">
+          <a href="http://stanford.edu/~sitzmann/">Vincent Sitzmann</a>,
+          <a href="https://niessnerlab.org/members/justus_thies/profile.html">Justus Thies</a>,
+          <a href="https://scholar.google.com/citations?user=gRqzSHsAAAAJ&hl=en&oi=ao">Felix Heide</a>,
+          <a href="https://niessnerlab.org/members/matthias_niessner/profile.html">Matthias Niessner</a>,
+          <a href="https://stanford.edu/~gordonwz/">Gordon Wetzstein</a>,
+          <a href="http://zollhoefer.com/">Michael Zollhöfer</a>
+      </p>
+
+      <p>
+        <a class="btn btn-primary" href="https://github.com/vsitzmann/deepvoxels">Code</a>
+        <a class="btn btn-primary" href="https://drive.google.com/open?id=1ScsRlnzy9Bd_n-xw83SP-0t548v63mPH">Dataset</a>
+        <a class="btn btn-primary" href="https://arxiv.org/abs/1812.01024">Paper</a>
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1BnZRyNcVUty6-LxAstN83H79ktUq8Cjp/view?usp=sharing">Supplemental Material</a> </p>
+    </div>
+
+    <div class="section">
+        <h3><a href="https://vsitzmann.github.io/srns">Follow-up work: Scene Representation Networks</a></h3>
+        <hr>
+        <p>
+            Check out <a href="https://vsitzmann.github.io/srns">Scene Representation Networks</a>,
+            where we replace the voxel grid with a continuous function that naturally
+            generalizes across scenes and smoothly parameterizes scene surfaces!
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>2D Generative Models don't Understand 3D</h3>
+        <hr>
+        <img src="img/teaser.gif" style="width:50%; display:block; margin-right:auto; margin-left:auto; margin-top:-10px;">
+        <p>
+            Deep Generative Models today allow us to perform highly-realistic image synthesis.
+            While each generated image is of high quality, a major challenge is to generate a series of coherent views of
+            the same scene. This requires the network to have a latent space representation that fundamentally understands the 3D layout
+            of the scene; e.g., how would the same chair look from a different viewpoint?
+        </p>
+        <p>
+            Unfortunately, this is challenging for existing models that are based on a series of 2D convolution kernels.
+            Instead of parameterizing 3D transformations, they will explain training data in
+            a higher-dimensional feature space, leading to poor generalization to novel views at test time - such as the output of
+            Pix2Pix trained on images of the cube above.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>DeepVoxels: A 3D-structured Neural Scene Representation</h3>
+        <hr>
+        <p>
+            With DeepVoxels, we introduce a 3D-structured neural scene representation.
+            DeepVoxels encodes the view-dependent appearance of a 3D scene without having to explicitly model its geometry.
+            DeepVoxels is based on a Cartesian 3D grid of persistent features that learn to make use of the underlying 3D
+            scene structure. It combines insights from 3D computer vision with recent advances in learning
+            image-to-image mappings. DeepVoxels is supervised, without requiring a 3D reconstruction of the scene,
+            using a 2D re-rendering loss and enforces perspective and multi-view geometry in a principled manner.
+        </p>
+    </div>
+
+    <div class="section">
+        <h3>Results on Real Captures with Nearest Neighbor Comparison</h3>
+        <hr>
+        <img src="img/dyck_stacked.mp4.gif" style="width:32%; margin-right:auto; margin-left:auto; margin-top:-10px;">
+        <img src="img/fountain_stacked.mp4.gif" style="width:32%; margin-right:auto; margin-left:auto; margin-top:-10px;">
+        <img src="img/globe_stacked.mp4.gif" style="width:32%; margin-right:auto; margin-left:auto; margin-top:-10px;">
+    </div>
+
+    <div class="section">
+        <h3>Submission Video</h3>
+        <hr>
+        <iframe width="884" height="497" src="https://www.youtube.com/embed/-Vto65Yxt8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!--        <iframe width="884" height="497" src="https://www.youtube.com/embed/HM_WsZhoGXw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+    </div>
+
+    <div class="section">
+        <h3>CVPR 2019 Paper</h3>
+        <hr>
+        <div>
+            <div class="list-group">
+                <a href="https://arxiv.org/abs/1812.01024" class="list-group-item">
+                    <img src="img/paper_thumbnails.png" style="width:100%; margin-right:-20px; margin-top:-10px;">
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <h3>Bibtex</h3>
+    <hr>
+    <div class="bibtexsection">
+    @inproceedings{sitzmann2019deepvoxels,
+        author = {Sitzmann, Vincent
+                  and Thies, Justus
+                  and Heide, Felix
+                  and Nie{\ss}ner, Matthias
+                  and Wetzstein, Gordon
+                  and Zollh{\"o}fer, Michael},
+        title = {DeepVoxels: Learning Persistent 3D Feature Embeddings},
+        booktitle = {Proc. Computer Vision and Pattern Recognition (CVPR), IEEE},
+        year={2019}
+      }
+    </div>
+
+
+    
+    <hr>
+      <footer>
+          <p>Send feedback and questions to <a href="http://web.stanford.edu/~sitzmann/">Vincent Sitzmann</a></p>
+           <p>Thanks to Volodymyr Kuleshov for his website template. &copy; 2017</p>
+      </footer>
+
+    </div><!--/.container-->
+  </body>
+</html>

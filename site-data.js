@@ -1423,7 +1423,7 @@ window.SITE_DATA = {
       "venueHtml": "<i>Proceedings of the 37th AAAI Conference on Artificial Intelligence (<b>AAAI'23</b>)</i>, pp. 7140-7147, 2023.",
       "year": 2023,
       "url": "https://arxiv.org/pdf/2306.08968.pdf",
-      "noteHtml": "(Oral, Acceptance Rate: 19.6%)",
+      "noteHtml": "(Oral)",
       "sourceIndex": 92,
       "sourceHtml": "Xin Cheng, Dengbao Wang, <b>Lei Feng*</b>, Minling Zhang, Bo An.<br/> <a href=\"https://arxiv.org/pdf/2306.08968.pdf\">Partial-Label Regression.</a><br/> <i>Proceedings of the 37th AAAI Conference on Artificial Intelligence (<b>AAAI'23</b>)</i>, pp. 7140-7147, 2023.<br/> (Acceptance Rate: 19.6%)"
     },
@@ -1433,7 +1433,7 @@ window.SITE_DATA = {
       "venueHtml": "<i>Proceedings of the 37th AAAI Conference on Artificial Intelligence (<b>AAAI'23</b>)</i>, pp. 9829-9836, 2023.",
       "year": 2023,
       "url": "https://arxiv.org/pdf/2306.06894.pdf",
-      "noteHtml": "(Oral, Acceptance Rate: 19.6%)",
+      "noteHtml": "(Oral)",
       "sourceIndex": 93,
       "sourceHtml": "Senlin Shu, Shuo He, Haobo Wang, Hongxin Wei, Tao Xiang, <b>Lei Feng*</b>.<br/> <a href=\"https://arxiv.org/pdf/2306.06894.pdf\">A Generalized Unbiased Risk Estimator for Learning with Augmented Classes.</a><br/> <i>Proceedings of the 37th AAAI Conference on Artificial Intelligence (<b>AAAI'23</b>)</i>, pp. 9829-9836, 2023.<br/> (Acceptance Rate: 19.6%)"
     },

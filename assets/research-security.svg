@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="security-title security-desc">
+  <title id="security-title">AI security and model defenses</title>
+  <desc id="security-desc">Inputs enter an AI model and pass through a defense shield. A separate backdoor attack path targets the model. Robustness and privacy are key security concerns.</desc>
+  <defs>
+    <marker id="security-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+    </marker>
+    <marker id="security-attack-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 7 4 1 7Z" fill="#9b615b"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-end="url(#security-arrow)">
+    <path d="M75 93H96"/>
+    <path d="M186 93H208"/>
+  </g>
+  <path d="M142 35V71" fill="none" stroke="#9b615b" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#security-attack-arrow)"/>
+  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
+    <rect x="13" y="74" width="61" height="38" rx="5"/>
+    <rect x="99" y="74" width="86" height="38" rx="5"/>
+    <path d="m237 55 26 10v23c0 18-26 32-26 32s-26-14-26-32V65Z" stroke="#1459a6"/>
+  </g>
+  <path d="m226 85 8 8 15-17" fill="none" stroke="#1459a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
+    <text x="142" y="23" fill="#9b615b">Backdoors</text>
+    <text x="43.5" y="93">Inputs</text>
+    <text x="142" y="93">AI model</text>
+    <text x="237" y="135">Defense</text>
+    <text x="140" y="161" fill="#64676d">Robustness &amp; privacy</text>
+  </g>
+</svg>

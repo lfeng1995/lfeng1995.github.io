@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="agents-title agents-desc">
+  <title id="agents-title">AI agents interacting with knowledge, tools, and users</title>
+  <desc id="agents-desc">An AI agent exchanges information with memory, a world model, external tools, and users.</desc>
+  <defs>
+    <marker id="agents-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-start="url(#agents-arrow)" marker-end="url(#agents-arrow)">
+    <path d="M68 48 110 65"/>
+    <path d="M212 48 170 65"/>
+    <path d="M68 128 110 111"/>
+    <path d="M212 128 170 111"/>
+  </g>
+  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
+    <rect x="14" y="15" width="104" height="32" rx="5"/>
+    <rect x="158" y="15" width="108" height="32" rx="5"/>
+    <rect x="14" y="129" width="104" height="32" rx="5"/>
+    <rect x="158" y="129" width="108" height="32" rx="5"/>
+    <rect x="96" y="65" width="88" height="46" rx="8" stroke="#1459a6"/>
+  </g>
+  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
+    <text x="66" y="31">Memory</text>
+    <text x="212" y="31">World model</text>
+    <text x="66" y="145">Tools</text>
+    <text x="212" y="145">Users</text>
+    <text x="140" y="88" font-size="15" font-weight="600">AI agent</text>
+  </g>
+</svg>

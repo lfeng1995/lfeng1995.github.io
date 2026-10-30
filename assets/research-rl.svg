@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="rl-title rl-desc">
+  <title id="rl-title">Agentic reinforcement learning cycle</title>
+  <desc id="rl-desc">A policy generates rollouts. Step-level credit from those interactions feeds back into policy improvement.</desc>
+  <defs>
+    <marker id="rl-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+    </marker>
+  </defs>
+  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-end="url(#rl-arrow)">
+    <path d="M114 46H164"/>
+    <path d="M212 66 166 107"/>
+    <path d="M114 109 70 68"/>
+  </g>
+  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
+    <rect x="23" y="27" width="90" height="38" rx="5"/>
+    <rect x="167" y="27" width="90" height="38" rx="5"/>
+    <rect x="88" y="110" width="104" height="38" rx="5" stroke="#1459a6"/>
+  </g>
+  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
+    <text x="68" y="46">Policy</text>
+    <text x="212" y="46">Rollouts</text>
+    <text x="140" y="129">Step credit</text>
+    <text x="140" y="165" fill="#64676d">Learn from feedback</text>
+  </g>
+</svg>

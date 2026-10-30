@@ -1,29 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="agents-title agents-desc">
-  <title id="agents-title">AI agents interacting with knowledge, tools, and users</title>
-  <desc id="agents-desc">An AI agent exchanges information with memory, a world model, external tools, and users.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="agents-title agents-desc">
+  <title id="agents-title">AI agents that plan, remember, and act</title>
+  <desc id="agents-desc">An AI agent combines experience memory and a world model to plan over time, use tools and reusable skills, and interact with users and tasks. Curved arrows and a recurring planning loop show learning through feedback.</desc>
   <defs>
-    <marker id="agents-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+    <linearGradient id="agents-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#edf4fc"/>
+    </linearGradient>
+    <linearGradient id="agents-core" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#2872bd"/>
+      <stop offset="1" stop-color="#1459a6"/>
+    </linearGradient>
+    <pattern id="agents-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r=".7" fill="#c8d9e9" opacity=".5"/>
+    </pattern>
+    <filter id="agents-shadow" x="-20%" y="-25%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#243d5c" flood-opacity=".07"/>
+    </filter>
+    <filter id="agents-core-shadow" x="-30%" y="-35%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#1459a6" flood-opacity=".17"/>
+    </filter>
+    <marker id="agents-arrow" viewBox="0 0 8 8" refX="6.7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#6a94bd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="agents-teal-arrow" viewBox="0 0 8 8" refX="6.7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#2d8b8e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
   </defs>
-  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-start="url(#agents-arrow)" marker-end="url(#agents-arrow)">
-    <path d="M68 48 110 65"/>
-    <path d="M212 48 170 65"/>
-    <path d="M68 128 110 111"/>
-    <path d="M212 128 170 111"/>
+
+  <rect x="1" y="1" width="318" height="278" rx="16" fill="url(#agents-bg)" stroke="#c8d9e9"/>
+  <rect x="10" y="10" width="300" height="260" rx="12" fill="url(#agents-grid)"/>
+
+  <!-- A quiet orbit makes the repeated planning and feedback cycle visible. -->
+  <circle cx="160" cy="147" r="59" fill="#e8f1fc" opacity=".72"/>
+  <circle cx="160" cy="147" r="58" fill="none" stroke="#ccdef1" stroke-width="1.2" stroke-dasharray="3 5"/>
+  <path d="M122 103a58 58 0 0 1 72 0" fill="none" stroke="#2d8b8e" stroke-width="1.6" stroke-linecap="round" marker-end="url(#agents-teal-arrow)"/>
+  <path d="M195 193a58 58 0 0 1-70 0" fill="none" stroke="#2d8b8e" stroke-width="1.6" stroke-linecap="round" marker-end="url(#agents-teal-arrow)"/>
+
+  <!-- Retrieval, model-based planning, tool use, and interaction. -->
+  <g fill="none" stroke="#6a94bd" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M83 96c0 10 22 6 39 14" marker-start="url(#agents-arrow)" marker-end="url(#agents-arrow)"/>
+    <path d="M237 96c0 10-22 6-39 14" marker-end="url(#agents-arrow)"/>
+    <path d="M123 184c-17 9-40 4-40 18" marker-end="url(#agents-arrow)"/>
+    <path d="M237 202c0-13-23-7-40-18" marker-start="url(#agents-arrow)" marker-end="url(#agents-arrow)"/>
   </g>
-  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
-    <rect x="14" y="15" width="104" height="32" rx="5"/>
-    <rect x="158" y="15" width="108" height="32" rx="5"/>
-    <rect x="14" y="129" width="104" height="32" rx="5"/>
-    <rect x="158" y="129" width="108" height="32" rx="5"/>
-    <rect x="96" y="65" width="88" height="46" rx="8" stroke="#1459a6"/>
+
+  <!-- Capability panels; their diagrams remain legible at card size. -->
+  <g fill="#ffffff" stroke="#c8d9e9" stroke-width="1" filter="url(#agents-shadow)">
+    <rect x="16" y="18" width="134" height="78" rx="12"/>
+    <rect x="170" y="18" width="134" height="78" rx="12"/>
+    <rect x="16" y="202" width="134" height="62" rx="12"/>
+    <rect x="170" y="202" width="134" height="62" rx="12"/>
   </g>
-  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
-    <text x="66" y="31">Memory</text>
-    <text x="212" y="31">World model</text>
-    <text x="66" y="145">Tools</text>
-    <text x="212" y="145">Users</text>
-    <text x="140" y="88" font-size="15" font-weight="600">AI agent</text>
+  <g fill="#243d5c" font-family="Arial, sans-serif" font-size="17" text-anchor="middle">
+    <text x="83" y="41">Memory</text>
+    <text x="237" y="41">World model</text>
+    <text x="83" y="252">Tools &amp; skills</text>
+    <text x="237" y="252">Users &amp; tasks</text>
+  </g>
+
+  <!-- Experience memory: stacked records with retrieval and update traces. -->
+  <g fill="none" stroke="#1459a6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M65 59v20c0 6 34 6 34 0V59" fill="#edf4fc"/>
+    <path d="M99 59c0 6-34 6-34 0s34-6 34 0Z" fill="#e0edfb"/>
+    <path d="M65 66c0 6 34 6 34 0M65 73c0 6 34 6 34 0"/>
+    <path d="M59 66h-6v12h6M105 60h7v12h-7" stroke="#9db8d2"/>
+  </g>
+  <circle cx="53" cy="66" r="2.6" fill="#2d8b8e"/>
+  <circle cx="112" cy="72" r="2.6" fill="#2d8b8e"/>
+  <path d="M71 78h8" fill="none" stroke="#2d8b8e" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- The world model is a connected, structured representation. -->
+  <g stroke="#94b3d1" stroke-width="1.5" fill="none">
+    <path d="m214 59 23 12 22-14m-22 14-25 11m25-11 24 11m-24-11 1-18"/>
+    <path d="m214 59-2 23m47-25 2 25m-49 0 49 0" stroke-dasharray="3 3"/>
+  </g>
+  <g fill="#edf4fc" stroke="#1459a6" stroke-width="1.4">
+    <circle cx="214" cy="59" r="4"/>
+    <circle cx="259" cy="57" r="4"/>
+    <circle cx="212" cy="82" r="4"/>
+    <circle cx="261" cy="82" r="4"/>
+    <circle cx="238" cy="53" r="3"/>
+  </g>
+  <circle cx="237" cy="71" r="6" fill="#2d8b8e" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- The core combines a reasoning network with a computational substrate. -->
+  <rect x="104" y="114" width="112" height="66" rx="21" fill="url(#agents-core)" filter="url(#agents-core-shadow)"/>
+  <rect x="105" y="115" width="110" height="64" rx="20" fill="none" stroke="#ffffff" stroke-opacity=".23"/>
+  <g fill="none" stroke="#d2e7ff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="146" y="124" width="28" height="21" rx="5"/>
+    <path d="M141 129h5m-5 10h5m28-10h5m-5 10h5m-25-19v4m12-4v4m-12 21v4m12-4v4"/>
+    <path d="m153 138 7-8 7 8h-14m7-8v10" stroke="#ffffff"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="153" cy="138" r="2"/>
+    <circle cx="160" cy="130" r="2"/>
+    <circle cx="167" cy="138" r="2"/>
+  </g>
+  <text x="160" y="166" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle">AI agent</text>
+
+  <!-- A short horizon of checkpoints and a concrete action cue. -->
+  <g fill="#57728e" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">
+    <text x="49" y="143">Plan</text>
+    <text x="271" y="143">Act</text>
+  </g>
+  <path d="M30 158h38" stroke="#9ebbd7" stroke-width="1.5" stroke-linecap="round"/>
+  <g stroke="#ffffff" stroke-width="1.5">
+    <circle cx="31" cy="158" r="3.5" fill="#1459a6"/>
+    <circle cx="49" cy="158" r="3.5" fill="#6f9fca"/>
+    <circle cx="67" cy="158" r="3.5" fill="#b3cce3"/>
+  </g>
+  <path d="m265 151 1 16 4-5 5 6 3-2-5-6 6-2Z" fill="#edf4fc" stroke="#2d8b8e" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- A reusable skill tile beside a recognizable wrench. -->
+  <g fill="none" stroke="#1459a6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M76 212a7 7 0 0 0-8 9l-9 9a3 3 0 0 0 4 4l9-9a7 7 0 0 0 9-8l-5 4-4-4Z" fill="#edf4fc"/>
+    <rect x="87" y="212" width="22" height="22" rx="5" fill="#edf4fc"/>
+    <path d="m94 219-3 4 3 4m8-8 3 4-3 4"/>
+    <path d="m99 219-2 8" stroke="#2d8b8e"/>
+  </g>
+
+  <!-- People and a task conversation close the feedback loop. -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="225" cy="218" r="5" fill="#edf4fc" stroke="#1459a6" stroke-width="1.6"/>
+    <path d="M214 234v-2a11 8 0 0 1 22 0v2Z" fill="#edf4fc" stroke="#1459a6" stroke-width="1.6"/>
+    <path d="M244 211h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4h-8l-6 5v-5h-2a4 4 0 0 1-4-4v-10a4 4 0 0 1 4-4Z" fill="#eef8f7" stroke="#2d8b8e" stroke-width="1.6"/>
+    <path d="M246 217h12m-12 6h8" stroke="#2d8b8e" stroke-width="1.5"/>
   </g>
 </svg>

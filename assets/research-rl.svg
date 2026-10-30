@@ -1,25 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="rl-title rl-desc">
-  <title id="rl-title">Agentic reinforcement learning cycle</title>
-  <desc id="rl-desc">A policy generates rollouts. Step-level credit from those interactions feeds back into policy improvement.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="rl-title rl-desc">
+  <title id="rl-title">Agentic reinforcement learning with step-level credit</title>
+  <desc id="rl-desc">A policy interacts with an environment over a long sequence of actions. Faint parallel trajectories show earlier rollouts; a single terminal reward provides sparse feedback. Step-level credit identifies the most useful action, and a stable policy update closes the learning loop.</desc>
   <defs>
+    <linearGradient id="rl-bg" x2="0" y2="1">
+      <stop stop-color="#fff"/>
+      <stop offset="1" stop-color="#edf4fc"/>
+    </linearGradient>
+    <pattern id="rl-grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#c8d9e9" stroke-width=".65"/>
+    </pattern>
+    <filter id="rl-shadow" x="-15%" y="-20%" width="130%" height="145%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#243d5c" flood-opacity=".07"/>
+    </filter>
     <marker id="rl-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
-      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+      <path d="M1 1 7 4 1 7Z" fill="#1459a6"/>
+    </marker>
+    <marker id="rl-teal-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M1 1 7 4 1 7Z" fill="#2d8b8e"/>
     </marker>
   </defs>
-  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-end="url(#rl-arrow)">
-    <path d="M114 46H164"/>
-    <path d="M212 66 166 107"/>
-    <path d="M114 109 70 68"/>
+
+  <rect x=".5" y=".5" width="319" height="279" rx="16" fill="url(#rl-bg)" stroke="#c8d9e9"/>
+  <rect x="1" y="1" width="318" height="278" rx="16" fill="url(#rl-grid)" opacity=".34"/>
+
+  <!-- A continuous return path makes policy improvement a closed loop. -->
+  <g fill="none" stroke="#1459a6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#rl-arrow)">
+    <path d="M256 257V261Q256 266 251 266H24Q18 266 18 260V50Q18 44 24 44H36"/>
+    <path d="M148 44H173"/>
+    <path d="M239 70V82"/>
+    <path d="M192 234H210"/>
   </g>
-  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
-    <rect x="23" y="27" width="90" height="38" rx="5"/>
-    <rect x="167" y="27" width="90" height="38" rx="5"/>
-    <rect x="88" y="110" width="104" height="38" rx="5" stroke="#1459a6"/>
+
+  <g fill="#fff" stroke="#c8d9e9" stroke-width="1.1" filter="url(#rl-shadow)">
+    <rect x="38" y="18" width="110" height="52" rx="11"/>
+    <rect x="175" y="18" width="127" height="52" rx="11"/>
+    <rect x="38" y="84" width="264" height="107" rx="12"/>
+    <rect x="38" y="209" width="154" height="48" rx="10"/>
+    <rect x="212" y="209" width="90" height="48" rx="10"/>
   </g>
-  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
-    <text x="68" y="46">Policy</text>
-    <text x="212" y="46">Rollouts</text>
-    <text x="140" y="129">Step credit</text>
-    <text x="140" y="165" fill="#64676d">Learn from feedback</text>
+
+  <g font-family="Arial, sans-serif" fill="#243d5c" text-anchor="middle">
+    <text x="93" y="41" font-size="18">Policy</text>
+    <text x="239" y="41" font-size="17">Environment</text>
   </g>
+
+  <!-- Policy network and a compact environment map. -->
+  <g fill="none" stroke="#94b6d7" stroke-width="1.3">
+    <path d="M74 53 92 50 111 55M74 60 92 50M74 53 92 62 111 55M74 60 92 62"/>
+    <path d="M216 60V50H229V60H242V51H260V60" stroke="#c8d9e9"/>
+  </g>
+  <g fill="#1459a6">
+    <circle cx="74" cy="53" r="2.6"/>
+    <circle cx="74" cy="60" r="2.6"/>
+    <circle cx="92" cy="50" r="2.6"/>
+    <circle cx="92" cy="62" r="2.6"/>
+    <circle cx="111" cy="55" r="3.2"/>
+  </g>
+  <path d="M220 56H235L245 55 255 56" fill="none" stroke="#2d8b8e" stroke-width="1.7" stroke-linecap="round"/>
+  <circle cx="235" cy="56" r="3.4" fill="#2d8b8e" stroke="#fff" stroke-width="1.2"/>
+  <path d="m254 48 2 3 3 1-3 1-2 3-1-3-3-1 3-1Z" fill="#1459a6"/>
+
+  <text x="52" y="107" fill="#243d5c" font-family="Arial, sans-serif" font-size="17">Interaction rollout</text>
+  <g fill="#dbe8f5">
+    <rect x="253" y="98" width="7" height="8" rx="2"/>
+    <rect x="264" y="95" width="7" height="11" rx="2"/>
+    <rect x="275" y="92" width="7" height="14" rx="2" fill="#9dbfe0"/>
+  </g>
+
+  <!-- Earlier trajectories give the interaction sequence a visible history. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M62 153 105 145 148 161 191 148 266 153" stroke="#dfeaf5" stroke-width="4"/>
+    <path d="M62 161 105 155 148 169 191 158 266 160" stroke="#e6eef7" stroke-width="2" stroke-dasharray="4 5"/>
+    <path d="M76 141 91 136M119 138 134 145M162 145 177 138M205 137 250 144" stroke="#1459a6" stroke-width="2" marker-end="url(#rl-arrow)"/>
+  </g>
+  <g stroke="#fff" stroke-width="2.5">
+    <circle cx="62" cy="145" r="13" fill="#1459a6"/>
+    <circle cx="105" cy="132" r="13" fill="#1459a6"/>
+    <circle cx="148" cy="151" r="15" fill="#2d8b8e"/>
+    <circle cx="191" cy="132" r="13" fill="#1459a6"/>
+  </g>
+  <circle cx="148" cy="151" r="18" fill="none" stroke="#2d8b8e" stroke-width="1" opacity=".32"/>
+  <g fill="#fff" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" dominant-baseline="central">
+    <text x="62" y="145">1</text>
+    <text x="105" y="132">2</text>
+    <text x="148" y="151">3</text>
+    <text x="191" y="132">4</text>
+  </g>
+  <circle cx="266" cy="146" r="16" fill="#e8f4f1" stroke="#2d8b8e" stroke-width="1.5"/>
+  <path d="m266 136 2.8 6.4 6.9.6-5.2 4.5 1.6 6.8-6.1-3.6-6.1 3.6 1.6-6.8-5.2-4.5 6.9-.6Z" fill="#2d8b8e"/>
+  <text x="224" y="179" fill="#4c6b86" font-family="Arial, sans-serif" font-size="15" text-anchor="middle">Sparse reward</text>
+
+  <!-- Terminal feedback is distributed over the contributing actions. -->
+  <path d="M283 146H286Q291 146 291 151V193Q291 199 285 199H121Q115 199 115 205V207" fill="none" stroke="#2d8b8e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#rl-teal-arrow)"/>
+  <g font-family="Arial, sans-serif" fill="#243d5c" text-anchor="middle">
+    <text x="115" y="228" font-size="17">Step credit</text>
+    <text x="257" y="230" font-size="17">Update</text>
+  </g>
+  <path d="M62 250H168" fill="none" stroke="#dbe5ef" stroke-width="1.2"/>
+  <g fill="#a7c5e3">
+    <rect x="72" y="244" width="15" height="6" rx="2"/>
+    <rect x="96" y="240" width="15" height="10" rx="2"/>
+    <rect x="120" y="233" width="15" height="17" rx="2" fill="#2d8b8e"/>
+    <rect x="144" y="243" width="15" height="7" rx="2"/>
+  </g>
+  <path d="M228 251H286" fill="none" stroke="#dbe5ef" stroke-width="1.2"/>
+  <path d="m231 248 9-6 9 2 10-7 11 1 13-1" fill="none" stroke="#1459a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="283" cy="237" r="2.8" fill="#2d8b8e" stroke="#fff" stroke-width="1"/>
 </svg>

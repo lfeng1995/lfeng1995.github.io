@@ -249,7 +249,7 @@ window.SITE_DATA = {
       ],
       "overview": "I study agents that plan over long interactions, choose tools and reusable skills, and learn from real-world trajectories. My interests include decision-oriented world models, conversational interaction with controllable user simulators, and memory systems that retain experience and retrieve relevant evidence for future tasks.",
       "diagram": "assets/research-agents.svg",
-      "diagramAlt": "An AI agent exchanges information with memory, a world model, tools, and users.",
+      "diagramAlt": "An AI agent combines memory and a world model to plan, use tools and skills, and interact with users and tasks.",
       "primaryPublicationIds": [
         1,
         5,
@@ -420,11 +420,34 @@ window.SITE_DATA = {
             "verificationUrl": "https://arxiv.org/abs/2609.08452",
             "verifiedOn": "2026-10-29"
           }
+        },
+        {
+          "title": "Learning from All-Failed Groups via First-Visit Coverage in Long-Horizon Agentic Tasks",
+          "label": "CovGPO: Coverage-conditioned Group Policy Optimization",
+          "cardLabel": "CovGPO",
+          "arxiv": {
+            "id": "2607.22724",
+            "url": "https://arxiv.org/abs/2607.22724",
+            "title": "Learning from All-Failed Groups via First-Visit Coverage in Long-Horizon Agentic Tasks",
+            "authors": [
+              "Kaibing Yang",
+              "Guangfeng Cai",
+              "Shengtian Yang",
+              "Shuo He",
+              "Yu Li",
+              "Mengyi Liu",
+              "Pengwei Chen",
+              "Jun Xu",
+              "Lei Feng"
+            ],
+            "verificationUrl": "https://arxiv.org/abs/2607.22724",
+            "verifiedOn": "2026-10-31"
+          }
         }
       ],
       "overview": "I develop reinforcement learning methods for agents facing sparse rewards and long decision sequences. My work focuses on assigning credit to useful actions, accounting for historical context and execution dependencies, stabilizing policy optimization, and learning from the joint decisions of collaborating agents.",
       "diagram": "assets/research-rl.svg",
-      "diagramAlt": "A policy produces interaction rollouts, which provide step-level credit to improve the policy.",
+      "diagramAlt": "A policy interacts with an environment, generates rollouts, assigns credit to individual steps, and updates through feedback.",
       "primaryPublicationIds": [
         16,
         10,
@@ -494,11 +517,49 @@ window.SITE_DATA = {
           "publicationId": 21,
           "label": "Targeted Adversarial Attacks on Multimodal Models",
           "cardLabel": "Multimodal adversarial attacks"
+        },
+        {
+          "title": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
+          "label": "AntiSkillBench: Privacy and impersonation risks in persona skills",
+          "cardLabel": "AntiSkillBench",
+          "arxiv": {
+            "id": "2608.03700",
+            "url": "https://arxiv.org/abs/2608.03700",
+            "title": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
+            "authors": [
+              "Yongli Xiang",
+              "Zhifang Zhang",
+              "Bojun Yang",
+              "Ziming Hong",
+              "Lei Feng",
+              "Miao Xu",
+              "Tongliang Liu"
+            ],
+            "verificationUrl": "https://arxiv.org/abs/2608.03700",
+            "verifiedOn": "2026-10-31"
+          }
+        },
+        {
+          "title": "When Collaboration Becomes a Trigger: Collective Evidence-Threshold Backdoors in Multi-Agent Systems",
+          "label": "BCBI & LATTE: Collective backdoor attacks and defenses",
+          "cardLabel": "BCBI & LATTE",
+          "arxiv": {
+            "id": "2608.01085",
+            "url": "https://arxiv.org/abs/2608.01085",
+            "title": "When Collaboration Becomes a Trigger: Collective Evidence-Threshold Backdoors in Multi-Agent Systems",
+            "authors": [
+              "Jia-Hao Xiao",
+              "Lei Feng",
+              "Min-Ling Zhang"
+            ],
+            "verificationUrl": "https://arxiv.org/abs/2608.01085",
+            "verifiedOn": "2026-10-31"
+          }
         }
       ],
       "overview": "I study the security, reliability, robustness, and privacy of AI agents and language and vision-language models. My work examines backdoors in multimodal alignment and compositional understanding, and develops defenses that preserve useful capabilities. I also investigate adversarial robustness and privacy risks.",
       "diagram": "assets/research-security.svg",
-      "diagramAlt": "Inputs pass through an AI model and a defense shield, with a backdoor attack path and privacy protection.",
+      "diagramAlt": "Backdoor and adversarial attacks target an AI model, while detection, robustness, and privacy defenses protect the system.",
       "primaryPublicationIds": [
         12,
         25,
@@ -1859,8 +1920,8 @@ window.SITE_DATA = {
       ]
     },
     {
-      "title": "Conference Area Chair / Senior Program Committee / Meta Reviewer",
-      "html": "<ul> <li><p> International Conference on Machine Learning (ICML): 2025, 2026, 2027 </p></li> <li><p> International Conference on Learning Representations (ICLR): 2025, 2026, 2027 </p></li> <li><p> Annual Conference on Neural Information Processing Systems (NeurIPS): 2024, 2025, 2026 </p></li> <li><p> AAAI Conference on Artificial Intelligence (AAAI): 2022, 2026, 2027 </p></li> <li><p> International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024, 2025, 2026 </p></li> </ul>",
+      "title": "Conference Area Chair",
+      "html": "<ul> <li><p> International Conference on Machine Learning (ICML): 2025, 2026, 2027 </p></li> <li><p> International Conference on Learning Representations (ICLR): 2025, 2026, 2027 </p></li> <li><p> Annual Conference on Neural Information Processing Systems (NeurIPS): 2024, 2025, 2026 </p></li> <li><p> AAAI Conference on Artificial Intelligence (AAAI): 2026, 2027 </p></li> <li><p> International Joint Conference on Artificial Intelligence (IJCAI): 2025, 2026 </p></li> </ul>",
       "items": [
         {
           "text": "International Conference on Machine Learning (ICML): 2025, 2026, 2027",
@@ -1875,26 +1936,40 @@ window.SITE_DATA = {
           "html": "Annual Conference on Neural Information Processing Systems (NeurIPS): 2024, 2025, 2026"
         },
         {
-          "text": "AAAI Conference on Artificial Intelligence (AAAI): 2022, 2026, 2027",
-          "html": "AAAI Conference on Artificial Intelligence (AAAI): 2022, 2026, 2027"
+          "text": "AAAI Conference on Artificial Intelligence (AAAI): 2026, 2027",
+          "html": "AAAI Conference on Artificial Intelligence (AAAI): 2026, 2027"
         },
         {
-          "text": "International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024, 2025, 2026",
-          "html": "International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024, 2025, 2026"
+          "text": "International Joint Conference on Artificial Intelligence (IJCAI): 2025, 2026",
+          "html": "International Joint Conference on Artificial Intelligence (IJCAI): 2025, 2026"
+        }
+      ]
+    },
+    {
+      "title": "Conference Senior Program Committee Member",
+      "html": "<ul> <li><p> AAAI Conference on Artificial Intelligence (AAAI): 2022 </p></li> <li><p> International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024 </p></li> </ul>",
+      "items": [
+        {
+          "text": "AAAI Conference on Artificial Intelligence (AAAI): 2022",
+          "html": "AAAI Conference on Artificial Intelligence (AAAI): 2022"
+        },
+        {
+          "text": "International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024",
+          "html": "International Joint Conference on Artificial Intelligence (IJCAI): 2021, 2023, 2024"
         }
       ]
     },
     {
       "title": "Journal Editorial Board",
-      "html": "<ul> <li><p>Action Editor, Neural Networks, Dec 2024 - Present </p></li> <li><p>Action Editor, Transactions on Machine Learning Research (TMLR), Nov 2024 - Present </p></li> </ul>",
+      "html": "<ul> <li><p>Action Editor, Neural Networks, Jan 2025 - Present </p></li> <li><p>Action Editor, Transactions on Machine Learning Research (TMLR), Jan 2025 - Present </p></li> </ul>",
       "items": [
         {
-          "text": "Action Editor, Neural Networks, Dec 2024 - Present",
-          "html": "Action Editor, Neural Networks, Dec 2024 - Present"
+          "text": "Action Editor, Neural Networks, Jan 2025 - Present",
+          "html": "Action Editor, Neural Networks, Jan 2025 - Present"
         },
         {
-          "text": "Action Editor, Transactions on Machine Learning Research (TMLR), Nov 2024 - Present",
-          "html": "Action Editor, Transactions on Machine Learning Research (TMLR), Nov 2024 - Present"
+          "text": "Action Editor, Transactions on Machine Learning Research (TMLR), Jan 2025 - Present",
+          "html": "Action Editor, Transactions on Machine Learning Research (TMLR), Jan 2025 - Present"
         }
       ]
     },
@@ -2474,8 +2549,62 @@ window.SITE_DATA = {
         ],
         "verificationUrl": "https://arxiv.org/abs/2609.08452",
         "searchedOn": "2026-10-29"
+      },
+      {
+        "sourceTitle": "Learning from All-Failed Groups via First-Visit Coverage in Long-Horizon Agentic Tasks",
+        "id": "2607.22724",
+        "url": "https://arxiv.org/abs/2607.22724",
+        "title": "Learning from All-Failed Groups via First-Visit Coverage in Long-Horizon Agentic Tasks",
+        "authors": [
+          "Kaibing Yang",
+          "Guangfeng Cai",
+          "Shengtian Yang",
+          "Shuo He",
+          "Yu Li",
+          "Mengyi Liu",
+          "Pengwei Chen",
+          "Jun Xu",
+          "Lei Feng"
+        ],
+        "verificationUrl": "https://arxiv.org/abs/2607.22724",
+        "searchedOn": "2026-10-31"
+      },
+      {
+        "sourceTitle": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
+        "id": "2608.03700",
+        "url": "https://arxiv.org/abs/2608.03700",
+        "title": "When Agents Learn to Be You: Benchmarking Privacy Leakage, Impersonation Risk, and Defenses in Persona Skills",
+        "authors": [
+          "Yongli Xiang",
+          "Zhifang Zhang",
+          "Bojun Yang",
+          "Ziming Hong",
+          "Lei Feng",
+          "Miao Xu",
+          "Tongliang Liu"
+        ],
+        "verificationUrl": "https://arxiv.org/abs/2608.03700",
+        "searchedOn": "2026-10-31"
+      },
+      {
+        "sourceTitle": "When Collaboration Becomes a Trigger: Collective Evidence-Threshold Backdoors in Multi-Agent Systems",
+        "id": "2608.01085",
+        "url": "https://arxiv.org/abs/2608.01085",
+        "title": "When Collaboration Becomes a Trigger: Collective Evidence-Threshold Backdoors in Multi-Agent Systems",
+        "authors": [
+          "Jia-Hao Xiao",
+          "Lei Feng",
+          "Min-Ling Zhang"
+        ],
+        "verificationUrl": "https://arxiv.org/abs/2608.01085",
+        "searchedOn": "2026-10-31"
       }
-    ]
+    ],
+    "experienceSource": {
+      "file": "codex-clipboard-681cb169-adcb-4df7-9bd8-fdf25718271e.png",
+      "suppliedOn": "2026-10-30",
+      "description": "User-provided employment history screenshot."
+    }
   },
   "team": [
     {
@@ -2745,5 +2874,31 @@ window.SITE_DATA = {
       "source": "User-provided update, 2026-10-29"
     }
   ],
-  "researchIntro": "My research focuses on AI agents, agentic reinforcement learning, and AI security. I study how agents learn from sparse interaction feedback, make reliable decisions over long interactions, and accumulate useful knowledge and experience across tasks."
+  "researchIntro": "My research focuses on AI agents, agentic reinforcement learning, and AI security. I study how agents learn from sparse interaction feedback, make reliable decisions over long interactions, and accumulate useful knowledge and experience across tasks.",
+  "experience": [
+    {
+      "title": "Full Professor (PhD Supervisor)",
+      "period": "Mar 2025 - Present",
+      "text": "Full Professor (PhD Supervisor). School of Computer Science and Engineering, Southeast University, China.",
+      "html": "<p><b>Full Professor (PhD Supervisor)</b></p>School of Computer Science and Engineering, Southeast University, China."
+    },
+    {
+      "title": "Assistant Professor (PhD Supervisor)",
+      "period": "Jun 2024 - Mar 2025",
+      "text": "Assistant Professor (PhD Supervisor). Information Systems Technology and Design Pillar, Singapore University of Technology and Design, Singapore.",
+      "html": "<p><b>Assistant Professor (PhD Supervisor)</b></p>Information Systems Technology and Design Pillar, Singapore University of Technology and Design, Singapore."
+    },
+    {
+      "title": "Visiting Professor (PhD Supervisor)",
+      "period": "Apr 2023 - Jun 2024",
+      "text": "Visiting Professor (PhD Supervisor). School of Computer Science and Engineering, Nanyang Technological University, Singapore.",
+      "html": "<p><b>Visiting Professor (PhD Supervisor)</b></p>School of Computer Science and Engineering, Nanyang Technological University, Singapore."
+    },
+    {
+      "title": "Full Professor (PhD Supervisor)",
+      "period": "Mar 2021 - Apr 2023",
+      "text": "Full Professor (PhD Supervisor). College of Computer Science, Chongqing University, China.",
+      "html": "<p><b>Full Professor (PhD Supervisor)</b></p>College of Computer Science, Chongqing University, China."
+    }
+  ]
 };

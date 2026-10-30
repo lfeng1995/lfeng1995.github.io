@@ -47,7 +47,7 @@ h2{font:500 33px/1.25 Georgia,"Times New Roman",serif;letter-spacing:-.015em}
 .research-topic{display:flex;flex-direction:column;min-width:0;padding:20px 17px;border:1px solid var(--line);border-radius:5px;background:linear-gradient(180deg,#fff,#fbfcfe)}
 .research-card-heading{display:flex;align-items:baseline;gap:12px;margin-bottom:18px}
 .research-topic h3{font:500 26px/1.3 Georgia,"Times New Roman",serif}
-.research-diagram{display:block;width:100%;height:auto;aspect-ratio:280/176;margin:0 0 19px;border-block:1px solid #e4ebf4;background:#f8fafd}
+.research-diagram{display:block;width:100%;height:auto;aspect-ratio:320/280;margin:0 0 19px;border:0;border-radius:10px;background:transparent}
 .research-description{flex:none;font-size:17px;line-height:1.7}
 .research-description p{margin:0 0 13px}
 .representative-works{min-height:185px;margin-top:20px;padding-top:16px;border-top:1px solid #e1e7ef}
@@ -70,6 +70,7 @@ h2{font:500 33px/1.25 Georgia,"Times New Roman",serif;letter-spacing:-.015em}
 .timeline-row{display:grid;grid-template-columns:118px minmax(0,1fr);gap:22px;border-bottom:1px solid #e8e9ec;padding:15px 0;font-size:17px;line-height:1.65}
 .timeline-row:first-child{padding-top:0}.timeline-row:last-child{border-bottom:0;padding-bottom:0}.timeline-row p{margin:0}
 .timeline-date{color:var(--muted);font-size:16px;font-variant-numeric:tabular-nums}
+#experience .timeline-row{grid-template-columns:180px minmax(0,1fr)}
 .site-footer{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding-block:23px 28px;color:var(--muted);font-size:15px}
 .site-footer>div{display:flex;gap:20px}.site-footer a{color:var(--muted)}
 .page-heading{padding:48px 0 28px}
@@ -96,6 +97,7 @@ h2{font:500 33px/1.25 Georgia,"Times New Roman",serif;letter-spacing:-.015em}
  .openings{margin-bottom:28px;gap:9px;padding:12px;font-size:15px}.section{padding:29px 0 32px}h2{font-size:29px}
  .section-heading{gap:10px}.section-more{font-size:15px}.section-intro{font-size:16px}
  .timeline-row{grid-template-columns:80px minmax(0,1fr);gap:15px;font-size:16px}.timeline-date{font-size:15px}
+ #experience .timeline-row{grid-template-columns:1fr;gap:5px}
  .site-footer{align-items:flex-start;flex-direction:column;gap:9px}.page-heading{padding-top:32px}.page-heading h1{font-size:36px}
  .paper h3{font-size:18px}
  .research-intro{font-size:17px}.research-topic h3{font-size:25px}.research-description{font-size:17px}

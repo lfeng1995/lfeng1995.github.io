@@ -17,7 +17,7 @@ const icons = {
   external: '<path d="M14 3h7v7M21 3 10 14M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/>',
 };
 const icon = name => `<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name] || icons.external}</svg>`;
-const navigation = [['About', 'index.html#about'], ['Research', 'index.html#research'], ['Publications', 'index.html#publications'], ['Team', 'index.html#team'], ['Service', 'index.html#service']];
+const navigation = [['About', 'index.html#about'], ['Research', 'index.html#research'], ['Publications', 'index.html#publications'], ['Experience', 'index.html#experience'], ['Honors', 'index.html#honors'], ['Group', 'index.html#team'], ['Service', 'index.html#service']];
 
 function document(page, title, content) {
   const active = { 'research.html': 'Publications' }[page];
@@ -84,10 +84,10 @@ function representativeWorks(theme) {
   const preprints = additional.filter(work => !work.publicationId);
   return `<div class="representative-works" id="${escape(theme.id)}-works"><h4>Representative work</h4><ul>${[...leading, ...published, ...preprints].map(representativeWork).join('')}</ul></div>`;
 }
-const researchTopics = data.researchThemes.map(theme => `<article class="research-topic" aria-labelledby="${escape(theme.id)}-title"><div class="research-card-heading"><h3 id="${escape(theme.id)}-title">${escape(theme.title)}</h3></div><img class="research-diagram" src="${escape(theme.diagram)}" alt="${escape(theme.diagramAlt)}" width="280" height="176"><div class="research-description"><p>${escape(theme.overview)}</p></div>${representativeWorks(theme)}</article>`).join('');
+const researchTopics = data.researchThemes.map(theme => `<article class="research-topic" aria-labelledby="${escape(theme.id)}-title"><div class="research-card-heading"><h3 id="${escape(theme.id)}-title">${escape(theme.title)}</h3></div><img class="research-diagram" src="${escape(theme.diagram)}" alt="${escape(theme.diagramAlt)}" width="320" height="280"><div class="research-description"><p>${escape(theme.overview)}</p></div>${representativeWorks(theme)}</article>`).join('');
 const years = [...new Set(data.publications.map(p => p.year))].sort((a, b) => b - a);
 const publicationList = () => `<nav class="year-navigation" aria-label="Publication years">${years.map(year => link(`#year-${year}`, String(year))).join('')}</nav><div class="papers">${years.map(year => `<section class="publication-year" data-year-group="${year}" id="year-${year}"><h3 class="publication-year-heading">${year}</h3>${data.publications.filter(p => p.year === year).map(paper).join('\n')}</section>`).join('\n')}</div>`;
-const serviceRank = s => /Editorial/i.test(s.title) ? 0 : /Area Chair/i.test(s.title) ? 1 : /Organizer/i.test(s.title) ? 2 : 3;
+const serviceRank = s => /Editorial/i.test(s.title) ? 0 : /Area Chair/i.test(s.title) ? 1 : /Senior Program Committee/i.test(s.title) ? 2 : /Organizer/i.test(s.title) ? 3 : 4;
 const serviceSections = [...data.services].sort((a, b) => serviceRank(a) - serviceRank(b));
 function teamMember(member) {
   const person = typeof member === 'string' ? { name: member } : member;
@@ -102,11 +102,11 @@ const home = `
 <div class="portrait"><img src="assets/lei-feng.jpg" alt="Portrait of Lei Feng" width="170" height="238" fetchpriority="high"></div>
 <div class="profile-copy"><p class="eyebrow">Professor · Southeast University</p><h1 id="profile-name">Lei Feng <span lang="zh-CN">冯磊</span></h1><p class="affiliation">School of Computer Science and Engineering<br>${link('https://www.seu.edu.cn/', 'Southeast University')}</p><div class="biography">${clean(data.about.html)}</div><div class="contact-links">${link('mailto:fenglei@seu.edu.cn', `${icon('email')}Email`)}${link(data.profile.scholarUrl, `${icon('scholar')}Google Scholar`)}${link(data.profile.officialUrl, `${icon('external')}官方主页`)}</div></div></section>
 <aside class="openings" aria-label="Research opportunities"><strong>Openings</strong><p>I am looking for highly motivated postdoctoral research fellows. Please ${link('mailto:fenglei@seu.edu.cn', 'email me')} if you are interested.</p></aside>
-<section class="section" id="research" aria-labelledby="research-title">${heading('<span id="research-title">Research interests</span>', '', 'What I work on')}<p class="section-intro research-intro">${escape(data.researchIntro)}</p><div class="research-topics">${researchTopics}</div></section>
+<section class="section" id="research" aria-labelledby="research-title">${heading('<span id="research-title">Research interests</span>')}<p class="section-intro research-intro">${escape(data.researchIntro)}</p><div class="research-topics">${researchTopics}</div></section>
 <section class="section" id="publications" aria-labelledby="publications-title">${heading('<span id="publications-title">Publications</span>')}<p class="section-intro author-note">* Corresponding author; † Equal contribution.</p>${publicationList()}</section>
-<section class="section" id="education" aria-labelledby="education-title"><span id="Education" class="anchor-alias"></span>${heading('<span id="education-title">Education</span>')}${timeline(data.education)}</section>
+<section class="section" id="experience" aria-labelledby="experience-title"><span id="education" class="anchor-alias"></span><span id="Education" class="anchor-alias"></span>${heading('<span id="experience-title">Experience</span>')}${timeline([...data.experience, ...data.education])}</section>
 <section class="section" id="honors" aria-labelledby="honors-title"><span id="Honors" class="anchor-alias"></span>${heading('<span id="honors-title">Honors & awards</span>')}${timeline(data.honors)}</section>
-<section class="section" id="team" aria-labelledby="team-title">${heading('<span id="team-title">Team</span>')}<div class="team-groups">${teamContent}</div></section>
+<section class="section" id="team" aria-labelledby="team-title">${heading('<span id="team-title">Group</span>')}<div class="team-groups">${teamContent}</div></section>
 <section class="section" id="service" aria-labelledby="service-title">${heading('<span id="service-title">Academic service</span>')}<div class="service-groups">${serviceContent}</div></section>`;
 const research = `<div class="page-heading"><p class="eyebrow">Research archive</p><h1>Publications</h1><p>A complete list of peer-reviewed publications.</p><p class="author-note">* Corresponding author; † Equal contribution. ${link(data.profile.scholarUrl, 'Google Scholar ↗')}</p></div>${publicationList()}`;
 for (const [file, title, content] of [['index.html', 'Lei Feng · Southeast University', home], ['research.html', 'Publications · Lei Feng', research]]) {

@@ -1,30 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 176" role="img" aria-labelledby="security-title security-desc">
-  <title id="security-title">AI security and model defenses</title>
-  <desc id="security-desc">Inputs enter an AI model and pass through a defense shield. A separate backdoor attack path targets the model. Robustness and privacy are key security concerns.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 280" role="img" aria-labelledby="security-title security-desc">
+  <title id="security-title">AI security: backdoors, robustness, and privacy</title>
+  <desc id="security-desc">Text, image, and multimodal inputs flow into a neural AI model and through a layered defense shield. A coral dashed path shows a backdoor trigger targeting the model. Detection, robustness, and privacy represent the complementary goals of AI security research.</desc>
   <defs>
-    <marker id="security-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
-      <path d="M1 1 7 4 1 7Z" fill="#7b9cbe"/>
+    <pattern id="security-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#dce8f5" stroke-width="0.65"/>
+    </pattern>
+    <linearGradient id="security-core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#397cbd"/>
+      <stop offset="1" stop-color="#1459a6"/>
+    </linearGradient>
+    <filter id="security-shadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#243d5c" flood-opacity="0.07"/>
+    </filter>
+    <marker id="security-arrow" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#7096ba" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
-    <marker id="security-attack-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto">
-      <path d="M1 1 7 4 1 7Z" fill="#9b615b"/>
+    <marker id="security-attack-arrow" viewBox="0 0 8 8" refX="6.5" refY="4" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="m1 1 6 3-6 3" fill="none" stroke="#c87975" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </marker>
   </defs>
-  <g fill="none" stroke="#7b9cbe" stroke-width="1.5" marker-end="url(#security-arrow)">
-    <path d="M75 93H96"/>
-    <path d="M186 93H208"/>
+
+  <!-- A quiet grid keeps the research illustration connected to the other cards. -->
+  <rect x="0.75" y="0.75" width="318.5" height="278.5" rx="16" fill="#f9fbfe"/>
+  <rect x="1" y="1" width="318" height="278" rx="15.75" fill="url(#security-grid)" opacity="0.45"/>
+  <rect x="0.75" y="0.75" width="318.5" height="278.5" rx="16" fill="none" stroke="#c8d9e9" stroke-width="1.5"/>
+
+  <!-- The trigger has its own path, separate from ordinary model inputs. -->
+  <rect x="16" y="16" width="288" height="68" rx="12" fill="#fff8f6" stroke="#ecd3cf" filter="url(#security-shadow)"/>
+  <text x="29" y="41" fill="#243d5c" font-family="Arial, sans-serif" font-size="18">Backdoors &amp; attacks</text>
+  <g fill="#c87975">
+    <rect x="30" y="53" width="5" height="5" rx="1"/>
+    <rect x="38" y="53" width="5" height="5" rx="1" opacity="0.45"/>
+    <rect x="30" y="61" width="5" height="5" rx="1" opacity="0.45"/>
+    <rect x="38" y="61" width="5" height="5" rx="1"/>
   </g>
-  <path d="M142 35V71" fill="none" stroke="#9b615b" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#security-attack-arrow)"/>
-  <g fill="#f3f7fc" stroke="#9ab3ce" stroke-width="1.2">
-    <rect x="13" y="74" width="61" height="38" rx="5"/>
-    <rect x="99" y="74" width="86" height="38" rx="5"/>
-    <path d="m237 55 26 10v23c0 18-26 32-26 32s-26-14-26-32V65Z" stroke="#1459a6"/>
+  <text x="54" y="66" fill="#9c605e" font-family="Arial, sans-serif" font-size="15.5">Trigger</text>
+  <path d="M110 61H264" fill="none" stroke="#c87975" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#security-attack-arrow)"/>
+  <g fill="none" stroke="#c87975" stroke-width="1.4">
+    <circle cx="281" cy="61" r="10"/>
+    <circle cx="281" cy="61" r="4.5"/>
+    <path d="M281 48v5m0 16v5m-13-13h5m16 0h5" stroke-linecap="round"/>
   </g>
-  <path d="m226 85 8 8 15-17" fill="none" stroke="#1459a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <g fill="#1459a6" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" dominant-baseline="middle">
-    <text x="142" y="23" fill="#9b615b">Backdoors</text>
-    <text x="43.5" y="93">Inputs</text>
-    <text x="142" y="93">AI model</text>
-    <text x="237" y="135">Defense</text>
-    <text x="140" y="161" fill="#64676d">Robustness &amp; privacy</text>
+  <path d="M160 84v20" fill="none" stroke="#c87975" stroke-width="1.6" stroke-dasharray="4 4" marker-end="url(#security-attack-arrow)"/>
+
+  <!-- Three input cards represent text, images, and multimodal signals. -->
+  <g filter="url(#security-shadow)">
+    <rect x="25" y="114" width="50" height="33" rx="6" fill="#fff" stroke="#c8d9e9"/>
+    <path d="M34 123h29m-29 6h23m-23 6h16" fill="none" stroke="#7c9fbe" stroke-width="2" stroke-linecap="round"/>
+    <rect x="20" y="145" width="34" height="33" rx="6" fill="#fff" stroke="#c8d9e9"/>
+    <circle cx="44" cy="154" r="3" fill="#90b5d6"/>
+    <path d="m25 170 8-10 6 6 4-4 6 8Z" fill="#dceafa" stroke="#7c9fbe" stroke-width="1.2" stroke-linejoin="round"/>
+    <rect x="58" y="140" width="30" height="38" rx="6" fill="#edf4fc" stroke="#abc6df"/>
+    <g fill="none" stroke="#2d8b8e" stroke-width="1.6" stroke-linecap="round">
+      <path d="M64 160v4m4-8v12m5-17v22m5-17v12m4-8v4"/>
+    </g>
+    <circle cx="66" cy="148" r="1.5" fill="#7c9fbe"/>
+    <circle cx="72" cy="148" r="1.5" fill="#7c9fbe"/>
+    <circle cx="78" cy="148" r="1.5" fill="#7c9fbe"/>
+  </g>
+
+  <g fill="none" stroke="#7096ba" stroke-width="1.6" marker-end="url(#security-arrow)">
+    <path d="M93 147h19"/>
+    <path d="M208 147h21"/>
+  </g>
+
+  <!-- A chip encloses a neural network, rather than a generic model box. -->
+  <circle cx="160" cy="147" r="40" fill="#edf4fc" opacity="0.8"/>
+  <g fill="none" stroke="#8eafcf" stroke-width="2" stroke-linecap="round">
+    <path d="M120 127h6m-6 11h6m-6 11h6m-6 11h6m-6 11h6m68-44h6m-6 11h6m-6 11h6m-6 11h6m-6 11h6"/>
+    <path d="M136 109v7m12-7v7m12-7v7m12-7v7m12-7v7m-48 61v7m12-7v7m12-7v7m12-7v7m12-7v7"/>
+  </g>
+  <rect x="126" y="116" width="68" height="61" rx="11" fill="#fff" stroke="#9abbd9" stroke-width="1.3" filter="url(#security-shadow)"/>
+  <rect x="134" y="124" width="52" height="45" rx="7" fill="url(#security-core)"/>
+  <g fill="none" stroke="#b6d8f4" stroke-width="1.1" opacity="0.9">
+    <path d="m144 133 16 11 16-11m-32 0 2 26 14-15 16 15v-26m-30 26h30m-32-26h32m-16 11v18"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="144" cy="133" r="2.5"/>
+    <circle cx="176" cy="133" r="2.5"/>
+    <circle cx="146" cy="159" r="2.5"/>
+    <circle cx="176" cy="159" r="2.5"/>
+    <circle cx="160" cy="162" r="2.5"/>
+    <circle cx="160" cy="144" r="4"/>
+  </g>
+
+  <!-- Nested shield contours make the defense visibly layered. -->
+  <path d="m266 110 30 11v23c0 19-15 33-30 41-15-8-30-22-30-41v-23Z" fill="#fff" stroke="#8bb1ce" stroke-width="1.4" stroke-linejoin="round" filter="url(#security-shadow)"/>
+  <path d="m266 120 21 8v16c0 14-10 25-21 31-11-6-21-17-21-31v-16Z" fill="#e7f3f4" stroke="#9ec9cc" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="m254 145 9 9 16-19" fill="none" stroke="#2d8b8e" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#243d5c" font-family="Arial, sans-serif" font-size="18" text-anchor="middle">
+    <text x="54" y="204">Inputs</text>
+    <text x="160" y="204">AI model</text>
+    <text x="266" y="204">Defense</text>
+  </g>
+
+  <path d="M20 218h280" fill="none" stroke="#d8e4f0"/>
+  <g fill="#edf4fc" stroke="#c8d9e9">
+    <circle cx="62" cy="238" r="13"/>
+    <circle cx="160" cy="238" r="13"/>
+    <circle cx="258" cy="238" r="13"/>
+  </g>
+  <g fill="none" stroke="#1459a6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="60" cy="236" r="5"/>
+    <path d="m64 240 5 5"/>
+    <path d="m160 229 7 4v8l-7 5-7-5v-8Z"/>
+    <path d="m156.5 237.5 2.5 2.5 4.5-5" stroke="#2d8b8e"/>
+    <rect x="252" y="236" width="12" height="10" rx="2"/>
+    <path d="M254 236v-3a4 4 0 0 1 8 0v3"/>
+  </g>
+  <circle cx="258" cy="241" r="1.2" fill="#1459a6"/>
+  <g fill="#243d5c" font-family="Arial, sans-serif" font-size="15.5" text-anchor="middle">
+    <text x="62" y="264">Detection</text>
+    <text x="160" y="264">Robustness</text>
+    <text x="258" y="264">Privacy</text>
   </g>
 </svg>

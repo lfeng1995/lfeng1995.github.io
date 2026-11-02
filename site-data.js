@@ -2124,6 +2124,13 @@ window.SITE_DATA = {
   ],
   "honors": [
     {
+      "title": "EMNLP 2026 SAC Highlight Award.",
+      "year": 2026,
+      "text": "EMNLP 2026 SAC Highlight Award.",
+      "html": "EMNLP 2026 SAC Highlight Award.",
+      "source": "User-provided update, 2026-11-02"
+    },
+    {
       "title": "World’s Top 2% Scientists.",
       "year": 2026,
       "period": "2025–2026",

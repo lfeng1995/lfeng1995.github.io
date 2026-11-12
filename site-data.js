@@ -569,6 +569,15 @@ window.SITE_DATA = {
   ],
   "publications": [
     {
+      "title": "MacroMind: Macro Placement via Multi-Agent Structural Reasoning.",
+      "authorsHtml": "Zihan Ma, Yubo Hou, Minnan Luo, Jinhai Hu, <b>Lei Feng</b>, Wenya Wang, Zhuoyi Lin.",
+      "venueHtml": "<i>Proceedings of the 33rd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (<b>KDD'27</b>)</i>, accepted, 2027.",
+      "year": 2027,
+      "url": "",
+      "noteHtml": "(Oral)",
+      "sourceIndex": 134
+    },
+    {
       "title": "Choosing Before Acting: Comparative Value Estimation for Long-Horizon Tool-Use Agents.",
       "authorsHtml": "Yu Li, Zheng Zhang, Xin Liu, Shengtian Yang, Guangfeng Cai, <b>Lei Feng*</b>.",
       "venueHtml": "<i>Proceedings of the 40th Conference on Neural Information Processing Systems (<b>NeurIPS'26</b>)</i>, 2026.",
@@ -2885,7 +2894,7 @@ window.SITE_DATA = {
   "experience": [
     {
       "title": "Full Professor (PhD Supervisor)",
-      "period": "Mar 2025 - Present",
+      "period": "Apr 2025 - Present",
       "text": "Full Professor (PhD Supervisor). School of Computer Science and Engineering, Southeast University, China.",
       "html": "<p><b>Full Professor (PhD Supervisor)</b></p>School of Computer Science and Engineering, Southeast University, China."
     },

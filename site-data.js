@@ -973,7 +973,7 @@ window.SITE_DATA = {
       "venueHtml": "<i>Proceedings of the 13th International Conference on Learning Representations (<b>ICLR'25</b>)</i>, 2025.",
       "year": 2025,
       "url": "https://openreview.net/forum?id=P42DbV2nuV",
-      "noteHtml": "",
+      "noteHtml": "(Spotlight, Acceptance Rate: 3.26% of all submissions)",
       "sourceIndex": 40,
       "sourceHtml": "Suqin Yuan, Runqi Lin, <b>Lei Feng*</b>, Bo Han, Tongliang Liu*.<br/> <a href=\"https://openreview.net/forum?id=P42DbV2nuV\">Instance-dependent Early Stopping.</a><br/> <i>Proceedings of the 13th International Conference on Learning Representations (<b>ICLR'25</b>)</i>, 2025."
     },
